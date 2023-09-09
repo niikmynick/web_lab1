@@ -16,6 +16,23 @@ function validateForm() {
         alert(error_message);
         return false;
     }
+    save_entry()
 
-    return true;
+    return false;
+}
+
+function save_entry() {
+    let rInput = document.getElementById("r-value");
+    let xInput = document.getElementById("x-value");
+    let yInput = document.getElementById("y-value");
+    let resultTable = document.getElementById("results-body");
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", "script.php?r-value=" + rInput.value + "&x-value=" + xInput.value + "&y-value=" + yInput.value, true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            resultTable.innerHTML += xhr.responseText; // Обновляем таблицу с результатами
+        }
+    };
+    xhr.send();
 }
