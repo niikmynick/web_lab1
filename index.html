@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Labwork</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="validation.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <div>
+                <span>
+                    Nikita Kobik, P3224
+                </span>
+                <span>
+                    variant 3404
+                </span>
+            </div>
+        </header>
+
+        <div class="graph">
+            <svg width="400" height="400">
+                <!-- Scopes -->
+                <polygon class="figure" points="200,200 200,100 300,200" fill="lightblue" />
+                <rect class="figure" x="200" y="200" width="50" height="100" fill="lightblue" />
+                <circle class="figure" cx="200" cy="200" r="50" fill="lightblue" mask="url(#mask)" />
+                <mask id="mask">
+                    <rect x="0" y="0" width="200" height="200" fill="white" />
+                </mask>
+
+                <!-- X-axis -->
+                <line x1="50" y1="200" x2="350" y2="200" stroke="black" stroke-width="2" />
+
+                <!-- Y-axis -->
+                <line x1="200" y1="50" x2="200" y2="350" stroke="black" stroke-width="2" />
+
+                <!-- X-axis arrow -->
+                <polygon points="350,200 340,190 340,210" fill="black" />
+
+                <!-- Y-axis arrow -->
+                <polygon points="200,50 190,60 210,60" fill="black" />
+
+                <!-- X-axis labels -->
+                <circle cx="100" cy="200" r="3" fill="black" />
+                <text x="100" y="220" text-anchor="middle">-R</text>
+
+                <circle cx="150" cy="200" r="3" fill="black" />
+                <text x="150" y="220" text-anchor="middle">-R/2</text>
+
+                <circle cx="250" cy="200" r="3" fill="black" />
+                <text x="250" y="220" text-anchor="middle">R/2</text>
+
+                <circle cx="300" cy="200" r="3" fill="black" />
+                <text x="300" y="220" text-anchor="middle">R</text>
+
+                <text x="344" y="230" text-anchor="middle">X</text>
+
+                <!-- Y-axis labels -->
+                <circle cx="200" cy="100" r="3" fill="black" />
+                <text x="180" y="104" text-anchor="middle">R</text>
+
+                <circle cx="200" cy="150" r="3" fill="black" />
+                <text x="180" y="154" text-anchor="middle">R/2</text>
+
+                <circle cx="200" cy="300" r="3" fill="black" />
+                <text x="180" y="254" text-anchor="middle">-R/2</text>
+
+                <circle cx="200" cy="250" r="3" fill="black" />
+                <text x="180" y="304" text-anchor="middle">-R</text>
+
+                <text x="180" y="60" text-anchor="middle">Y</text>
+            </svg>
+        </div>
+
+        <div>
+            <form action="./script.php" method="get" onsubmit="return validateForm()">
+                <label for="x-value">X:</label>
+                <input type="text" id="x-value" name="x-value"><br>
+
+                <label for="y-value">Y: </label>
+                <input type="text" id="y-value" name="y-value"><br>
+
+                <label for="r-value">R:</label>
+                <select name="r-value" id="r-value">
+                    <option value="1">1</option>
+                    <option value="1.5">1.5</option>
+                    <option value="2">2</option>
+                    <option value="2.5">2.5</option>
+                    <option value="3">3</option>
+                </select>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <!-- This div will be filled with the results by PHP -->
+        <div id="results"></div>
+
+    </body>
+</html>
