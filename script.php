@@ -34,7 +34,6 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
     $response .= '<td>' . date("Y-m-d H:i:s") . '</td>';
     $response .= '<td>' . (microtime(true) - $start_time) * 1000 . " ms" . '</td>';
     $response .= '</tr>';
-    $response .= '</table>';
 
     echo $response;
 

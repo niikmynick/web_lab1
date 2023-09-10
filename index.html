@@ -8,12 +8,8 @@
     <body>
         <header class="header">
             <div>
-                <span>
-                    Nikita Kobik, P3224
-                </span>
-                <span>
-                    variant 3404
-                </span>
+                <span>Nikita Kobik, P3224</span>
+                <span>variant 3404</span>
             </div>
         </header>
 
@@ -41,43 +37,45 @@
 
                 <!-- X-axis labels -->
                 <circle cx="100" cy="200" r="3" fill="black" />
-                <text x="100" y="220" text-anchor="middle">-R</text>
+                <text x="100" y="220" text-anchor="middle" class="r-minus-label">-R</text>
 
                 <circle cx="150" cy="200" r="3" fill="black" />
-                <text x="150" y="220" text-anchor="middle">-R/2</text>
+                <text x="150" y="220" text-anchor="middle" class="r-half-minus-label">-R/2</text>
 
                 <circle cx="250" cy="200" r="3" fill="black" />
-                <text x="250" y="220" text-anchor="middle">R/2</text>
+                <text x="250" y="220" text-anchor="middle" class="r-half-label">R/2</text>
 
                 <circle cx="300" cy="200" r="3" fill="black" />
-                <text x="300" y="220" text-anchor="middle">R</text>
+                <text x="300" y="220" text-anchor="middle" class="r-label">R</text>
 
                 <text x="344" y="230" text-anchor="middle">X</text>
 
                 <!-- Y-axis labels -->
                 <circle cx="200" cy="100" r="3" fill="black" />
-                <text x="180" y="104" text-anchor="middle">R</text>
+                <text x="180" y="104" text-anchor="middle" class="r-label">R</text>
 
                 <circle cx="200" cy="150" r="3" fill="black" />
-                <text x="180" y="154" text-anchor="middle">R/2</text>
+                <text x="180" y="154" text-anchor="middle" class="r-half-label">R/2</text>
 
                 <circle cx="200" cy="300" r="3" fill="black" />
-                <text x="180" y="254" text-anchor="middle">-R/2</text>
+                <text x="180" y="254" text-anchor="middle" class="r-half-minus-label">-R/2</text>
 
                 <circle cx="200" cy="250" r="3" fill="black" />
-                <text x="180" y="304" text-anchor="middle">-R</text>
+                <text x="180" y="304" text-anchor="middle" class="r-minus-label">-R</text>
 
                 <text x="180" y="60" text-anchor="middle">Y</text>
+
+                <circle cx="200" cy="200" r="3" fill="red" id="point"/>
             </svg>
         </div>
 
         <div>
             <form action="./script.php" method="get" onsubmit="return validateForm()">
                 <label for="x-value">X:</label>
-                <input type="text" id="x-value" name="x-value"><br>
+                <input type="text" id="x-value" name="x-value">
 
                 <label for="y-value">Y: </label>
-                <input type="text" id="y-value" name="y-value"><br>
+                <input type="text" id="y-value" name="y-value">
 
                 <label for="r-value">R:</label>
                 <select name="r-value" id="r-value">

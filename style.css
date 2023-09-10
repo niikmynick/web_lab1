@@ -9,3 +9,7 @@ header {
 input {
     margin: 10px;
 }
+
+#results {
+    display: none;
+}
