@@ -28,8 +28,6 @@ function validateForm() {
         return false;
     }
 
-    draw(x, y, r)
-
     // return false to prevent updating the page
     return false;
 }
