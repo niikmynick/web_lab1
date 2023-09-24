@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
         "y"=>$y,
         "r"=>$r,
         "status"=>$hit_flag ? "In": "Out",
-        "current_time"=>date("Y-m-d H:i:s"),
+        "current_time"=>date("Y-m-d H:i:s", time()-$timezone*60),
         "script_time"=>round((microtime(true) - $start_time) * 1000, 2),
     );
 
